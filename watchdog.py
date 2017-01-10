@@ -6,20 +6,20 @@ import time
 import datetime
 
 
-def isclosed():
+def isdoorclosed():
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(port_or_pin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+    GPIO.setup(config.REED, GPIO.IN, pull_up_down=GPIO.PUD_UP)
     if GPIO.input(config.REED):
         print('Door status: CLOSED')
     else:
         print('Door status: OPEN')
-    return GPIO.input(config.REED)
+    return not GPIO.input(config.REED)
 
 
 def watch():
     while True:
         if not isclosed():
-            notifyonopen()
+            #notifyonopen()
             print('Door is opening...')
             opentime = datetime.datetime.now()
             while not isclosed():
