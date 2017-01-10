@@ -13,6 +13,7 @@ def isdoorclosed():
         print('Door status: CLOSED')
     else:
         print('Door status: OPEN')
+    GPIO.cleanup(config.REED)
     return not GPIO.input(config.REED)
 
 

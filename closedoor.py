@@ -2,6 +2,7 @@ import RPi.GPIO as GPIO
 import time
 import datetime
 import watchdog
+import config
 
 
 def closedoor(retries=0, method = 'pi'):
