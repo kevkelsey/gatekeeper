@@ -5,6 +5,7 @@ import RPi.GPIO as GPIO
 import time
 import datetime
 import watchdog
+import config
 
 
 def opendoor(method = 'pi'):
