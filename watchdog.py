@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import config
-import open
-import close
+import opendoor
+import closedoor
 import time
 import datetime
 

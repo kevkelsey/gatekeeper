@@ -24,6 +24,7 @@ def opendoor(method = 'pi'):
 
 
 if __name__ == "__main___":
+    print('Running OPENDOOR()')
     opendoor()
 
 
