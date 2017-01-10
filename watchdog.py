@@ -18,10 +18,10 @@ def isdoorclosed():
     GPIO.cleanup(config.REED)
     return doorclosed
 
-def notifyopen()
+def notifyopen():
     requests.get(config.openKEY)
 
-def notifyclose()
+def notifyclose():
     requests.get(config.closeKEY)
 
 
