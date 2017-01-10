@@ -20,12 +20,12 @@ def opendoor(method = 'pi'):
     GPIO.cleanup()
     with open(datetime.datetime.now().strftime("%Y-%m") + '.txt', 'a') as file:
         file.write(datetime.datetime.now().strftime("%m-%d %H:%M:%S") + ' OPENED with ' + method + '\n')
-    #notifyOpen()
+    watchdog.notifyopen()
     print('Done!')
 
 
-if __name__ == "__main___":
-    print('Running OPENDOOR()')
+if __name__ == "__main__":
+    print('Running opendoor()')
     opendoor()
 
 

@@ -20,7 +20,7 @@ def closedoor(retries=0, method = 'pi'):
     if watchdog.isdoorclosed():
         with open(datetime.datetime.now().strftime("%Y-%m") + '.txt', 'a') as file:
             file.write(datetime.datetime.now().strftime("%m-%d %H:%M:%S") + ' CLOSED with ' + method + '\n')
-        #notifyOpen()
+        watchdog.notifyclose()
         print('Done!')
     else:
         if retries < config.RETRIES:
@@ -32,5 +32,6 @@ def closedoor(retries=0, method = 'pi'):
 
 
 
-if __name__ == "__main___":
+if __name__ == "__main__":
+    print('Running closedoor()')
     closedoor()

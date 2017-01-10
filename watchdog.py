@@ -3,6 +3,7 @@ import config
 import opendoor
 import closedoor
 import time
+import requests
 import datetime
 
 
@@ -16,6 +17,12 @@ def isdoorclosed():
         print('Door status: OPEN')
     GPIO.cleanup(config.REED)
     return doorclosed
+
+def notifyopen()
+    requests.get(config.openKEY)
+
+def notifyclose()
+    requests.get(config.closeKEY)
 
 
 def watch():

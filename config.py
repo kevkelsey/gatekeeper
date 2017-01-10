@@ -10,5 +10,5 @@ RETRIES = 1
 
 
 # Maker keys
-openKEY = ''
-closeKEY = ''
+openKEY = 'https://maker.ifttt.com/trigger/door_open/with/key/GIq_WDg-g9UHWOMec8_hr'
+closeKEY = 'https://maker.ifttt.com/trigger/door_closed/with/key/GIq_WDg-g9UHWOMec8_hr'
