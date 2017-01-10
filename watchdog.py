@@ -9,12 +9,13 @@ import datetime
 def isdoorclosed():
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(config.REED, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    if GPIO.input(config.REED):
+    doorclosed = not GPIO.input(config.REED)
+    if doorclosed:
         print('Door status: CLOSED')
     else:
         print('Door status: OPEN')
     GPIO.cleanup(config.REED)
-    return not GPIO.input(config.REED)
+    return doorclosed
 
 
 def watch():
