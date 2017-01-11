@@ -18,7 +18,7 @@ def opendoor(method = 'pi'):
     time.sleep(1)
     GPIO.output(config.DOOR, True)
     GPIO.cleanup()
-    with open(datetime.datetime.now().strftime("%Y-%m") + '.txt', 'a') as file:
+    with open(config.PATH + datetime.datetime.now().strftime("%Y-%m") + '.txt', 'a') as file:
         file.write(datetime.datetime.now().strftime("%m-%d %H:%M:%S") + ' OPENED with ' + method + '\n')
     watchdog.notifyopen()
     print('Done!')

@@ -20,7 +20,7 @@ def closedoor(retries=0, method = 'pi'):
     GPIO.cleanup()
     time.sleep(config.CLOSETIME)
     if watchdog.isdoorclosed():
-        with open(datetime.datetime.now().strftime("%Y-%m") + '.txt', 'a') as file:
+        with open(config.PATH + datetime.datetime.now().strftime("%Y-%m") + '.txt', 'a') as file:
             file.write(datetime.datetime.now().strftime("%m-%d %H:%M:%S") + ' CLOSED with ' + method + '\n')
         watchdog.notifyclose()
         print('Done!')
