@@ -24,7 +24,7 @@ def closedoor(retries=0, method = 'pi'):
         print('Done!')
     else:
         if retries < config.RETRIES:
-            print('Door close failed, trying again in {} seconds'.format(config.RETRYTIME))
+            print('Door close failed, trying again in {} seconds'.format(str(config.RETRYTIME))
             time.sleep(config.RETRYTIME)
             closedoor(retries + 1, 'retry')
         else:

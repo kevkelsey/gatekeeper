@@ -7,7 +7,7 @@ CLOSETIME = 20
 RETRIES = 1
 
 # Time in seconds to wait before retrying close operation
-
+RETRYTIME = 20
 
 # Maker keys
 openKEY = 'https://maker.ifttt.com/trigger/door_open/with/key/GIq_WDg-g9UHWOMec8_hr'
