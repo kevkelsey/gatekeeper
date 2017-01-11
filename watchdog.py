@@ -19,9 +19,11 @@ def isdoorclosed():
     return doorclosed
 
 def notifyopen():
+    print('Sending notification...')
     requests.get(config.openKEY)
 
 def notifyclose():
+    print('Sending notification...')
     requests.get(config.closeKEY)
 
 

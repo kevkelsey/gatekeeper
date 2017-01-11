@@ -1,3 +1,5 @@
+
+
 # GPIO pin mapping
 DOOR = 12
 REED = 6
